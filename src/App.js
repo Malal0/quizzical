@@ -1,6 +1,7 @@
 import React from "react"
 import Title from "./components/Title"
-import Questions from "./components/Questions"
+import Questionnaire from "./components/Questionnaire"
+import TurnIn from "./components/TurnIn"
 
 export default function App() {
     const [quizStarted, setQuizStarted] = React.useState(false)
@@ -11,7 +12,7 @@ export default function App() {
     return (
         <div>
             {quizStarted ?
-                <Questions /> :
+                <Questionnaire /> :
                 <Title handleClick={startQuiz} />}
         </div>
     )
