@@ -5,7 +5,7 @@ export default function Questionnaire() {
     return (
         <div>
             <Questions />
-            <TurnIn />
+            <TurnIn answersCorrect={answers that are correct / total questions}/>
         </div>
     )
 }
