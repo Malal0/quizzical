@@ -41,7 +41,21 @@ body {
   width: fit-content;
 }
 
-.answer .active {
+.answer:hover {
+  transform: scale(1.05);
+}
+
+.chosen {
   background-color: #D6DBF5;
+  border: none;
+}
+
+.correct {
+  background-color: #94D7A2;
+  border: none;
+}
+
+.incorrect {
+  background-color: #F8BCBC;
   border: none;
 }

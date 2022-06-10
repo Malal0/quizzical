@@ -5,10 +5,10 @@ export default function Question(props) {
         <div className="questionContainer">
             <h3 className="question">{props.question}</h3>
             <div className="answerContainer">
-                <div className="answer active">{answersArray[0]}</div>
-                <div className="answer">{answersArray[1]}</div>
-                <div className="answer">{answersArray[2]}</div>
-                <div className="answer">{answersArray[3]}</div>
+                <button className="answer incorrect">{answersArray[0]}</button>
+                <button className="answer chosen">{answersArray[1]}</button>
+                <button className="answer">{answersArray[2]}</button>
+                <button className="answer correct">{answersArray[3]}</button>
             </div>
         </div>
     )
