@@ -13,9 +13,9 @@ export default function Questionnaire(props) {
             allAnswers.push(wrongAnswer)
         });
         allAnswers.push(ques.correct_answer)
-        console.log(allAnswers)
+        //console.log(allAnswers)
         return (
-            < Question question={ques.question} answers={ques.correct_answer} />
+            < Question question={ques.question} answers={allAnswers} />
         )
 
     })

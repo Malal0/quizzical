@@ -1,4 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap');
+
 * {
-  background-color: black;
-  color: green;
+  margin: 0;
+  padding: 0;
+  color: #293264;
+  font-family: 'Karla', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F7FB;
+}
+
+.App {
+  border: 2px solid aqua;
+  width: 85%;
+  margin: auto;
+}
+
+.questionContainer {
+  margin-block: 2em;
+}
+
+.question {
+  margin-bottom: 2em;
+}
+
+.answerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.answer {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #4D5B9E;
+  width: fit-content;
+}
+
+.answer .active {
+  background-color: #D6DBF5;
+  border: none;
 }

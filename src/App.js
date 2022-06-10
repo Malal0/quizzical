@@ -24,7 +24,7 @@ export default function App() {
     }
 
     return (
-        <div>
+        <div className="App">
             {quizStarted ?
                 <Questionnaire data={questionsData} /> :
                 <Title handleClick={startQuiz} />}
