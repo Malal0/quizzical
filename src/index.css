@@ -21,6 +21,15 @@ body {
   margin: auto;
 }
 
+.submit {
+  background-color: #4D5B9E;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  text-transform: capitalize;
+}
+
 .questionContainer {
   margin-block: 2em;
 }
@@ -39,6 +48,7 @@ body {
   border-radius: 8px;
   border: 2px solid #4D5B9E;
   width: fit-content;
+  transition: 100ms ease-in-out;
 }
 
 .answer:hover {
