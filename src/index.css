@@ -16,7 +16,6 @@ body {
 }
 
 .App {
-  border: 2px solid aqua;
   width: 85%;
   margin: auto;
 }
@@ -31,11 +30,11 @@ body {
 }
 
 .questionContainer {
-  margin-block: 2em;
+  margin-block: 1em;
 }
 
 .question {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .answerContainer {
@@ -68,4 +67,13 @@ body {
 .incorrect {
   background-color: #F8BCBC;
   border: none;
+}
+
+.turnIn {
+  width: fit-content;
+  margin: 3em auto;
+  display: flex;
+  align-items: baseline;
+  font-weight: 700;
+  gap: 1em;
 }
