@@ -1,6 +1,5 @@
 import React from "react"
 import Title from "./components/Title"
-import Question from "./components/Question"
 import TurnIn from "./components/TurnIn"
 
 export default function App() {
@@ -9,7 +8,7 @@ export default function App() {
     const [questionsData, setQuestionsData] = React.useState([])
 
     React.useEffect(() => {
-        fetch("https://opentdb.com/api.php?amount=5&category=19&difficulty=medium&type=multiple")
+        fetch("https://opentdb.com/api.php?amount=5&category=19&difficulty=easy&type=multiple")
             .then(res => res.json())
             .then(data => setQuestionsData(data.results))
     }, [])
@@ -23,11 +22,10 @@ export default function App() {
         console.log("checking answers")
     }
 
-    const [answeredCorrectly, setAnsweredCorrectly] = React.useState(false);
-
     const questions = questionsData.map(ques => {
         let allAnswers = []
         let addedClass = ""
+        let wasSelected = false
 
         ques.incorrect_answers.forEach(wrongAnswer => {
             allAnswers.push(wrongAnswer)
@@ -35,15 +33,19 @@ export default function App() {
         allAnswers.push(ques.correct_answer)
 
         function answerAction(e) {
-            if (ques.correct_answer === e.target.innerText) {
-                console.log("correct")
-            } else {
-                console.log("false")
-            }
+            console.log("click")
         }
 
         return (
-            < Question question={ques.question} answers={allAnswers} handleClick={answerAction} addedClass={addedClass} />
+            <div className="questionContainer">
+                <h3 className="question">{ques.question}</h3>
+                <div className="answerContainer">
+                    <button className={"answer " + addedClass} onClick={answerAction}>{allAnswers[0]}</button>
+                    <button className={"answer " + addedClass} onClick={answerAction}>{allAnswers[1]}</button>
+                    <button className={"answer " + addedClass} onClick={answerAction}>{allAnswers[2]}</button>
+                    <button className={"answer " + addedClass} onClick={answerAction}>{allAnswers[3]}</button>
+                </div>
+            </div>
         )
 
     })
@@ -53,7 +55,7 @@ export default function App() {
             {quizStarted ?
                 <div>
                     {questions}
-                    <TurnIn />
+                    <TurnIn answersCorrect={answersCorrect} />
                 </div> :
                 <Title handleClick={startQuiz} />}
             <div className="blob1"></div>

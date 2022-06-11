@@ -5,6 +5,7 @@
   padding: 0;
   color: #293264;
   font-family: 'Karla', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,11 +15,28 @@ body {
   align-items: center;
   background-color: #F5F7FB;
   position: relative;
+  overflow: hidden;
 }
 
 .App {
   width: 85%;
   margin: auto;
+}
+
+.titleContainer {
+  width: 200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .submit {
@@ -28,6 +46,7 @@ body {
   border-radius: 10px;
   border: none;
   text-transform: capitalize;
+  width: fit-content;
 }
 
 .questionContainer {
