@@ -35,11 +35,12 @@ body {
 
 .question {
   margin-bottom: 1em;
+  font-weight: 700;
 }
 
 .answerContainer {
   display: flex;
-  justify-content: space-between;
+  gap: 2em;
 }
 
 .answer {
