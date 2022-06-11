@@ -9,11 +9,10 @@ export default function App() {
     const [questionsData, setQuestionsData] = React.useState([])
 
     React.useEffect(() => {
-        fetch("https://opentdb.com/api.php?amount=5&category=23&difficulty=medium&type=multiple")
+        fetch("https://opentdb.com/api.php?amount=5&category=19&difficulty=medium&type=multiple")
             .then(res => res.json())
             .then(data => setQuestionsData(data.results))
     }, [])
-    console.log(questionsData)
 
     function startQuiz() {
         setQuizStarted(true)
@@ -24,21 +23,27 @@ export default function App() {
         console.log("checking answers")
     }
 
-    function answerAction(e) {
-        console.log(e.target.innerText)
-        console.log(e.target.parentNode.parentNode)
-    }
+    const [answeredCorrectly, setAnsweredCorrectly] = React.useState(false);
 
     const questions = questionsData.map(ques => {
         let allAnswers = []
+        let addedClass = ""
 
         ques.incorrect_answers.forEach(wrongAnswer => {
             allAnswers.push(wrongAnswer)
         });
         allAnswers.push(ques.correct_answer)
-        //console.log(allAnswers)
+
+        function answerAction(e) {
+            if (ques.correct_answer === e.target.innerText) {
+                console.log("correct")
+            } else {
+                console.log("false")
+            }
+        }
+
         return (
-            < Question question={ques.question} answers={allAnswers} correctAnswer={ques.correct_answer} handleClick={answerAction} />
+            < Question question={ques.question} answers={allAnswers} handleClick={answerAction} addedClass={addedClass} />
         )
 
     })
@@ -51,6 +56,8 @@ export default function App() {
                     <TurnIn />
                 </div> :
                 <Title handleClick={startQuiz} />}
+            <div className="blob1"></div>
+            <div className="blob2"></div>
         </div>
     )
 }

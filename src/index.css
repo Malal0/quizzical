@@ -13,6 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #F5F7FB;
+  position: relative;
 }
 
 .App {
@@ -77,4 +78,27 @@ body {
   align-items: baseline;
   font-weight: 700;
   gap: 1em;
+}
+
+.blob1 {
+  height: 297px;
+  width: 235px;
+  background-color: #fffad1;
+  border-radius: 46% 54% 34% 66% / 31% 35% 65% 69%;
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  transform: rotate(135deg);
+  z-index: -10;
+}
+
+.blob2 {
+  height: 235px;
+  width: 297px;
+  background-color: #deebf8;
+  border-radius: 69% 31% 39% 61% / 55% 52% 48% 45%;
+  position: absolute;
+  left: -70px;
+  bottom: -70px;
+  z-index: -10;
 }
