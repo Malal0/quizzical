@@ -38,15 +38,6 @@ export default function App() {
 
 
         return (
-            // <div className="questionContainer">
-            //     <h3 className="question">{ques.question}</h3>
-            //     <div className="answerContainer">
-            //         <button className={"answer "} onClick={answerAction}>{allAnswers[0]}</button>
-            //         <button className={"answer "} onClick={answerAction}>{allAnswers[1]}</button>
-            //         <button className={"answer "} onClick={answerAction}>{allAnswers[2]}</button>
-            //         <button className={"answer "} onClick={answerAction}>{allAnswers[3]}</button>
-            //     </div>
-            // </div>
             <Question theQuestion={ques.question} answersArray={allAnswers} />
         )
 

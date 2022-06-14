@@ -21,6 +21,12 @@ export default function Option(props) {
     }
 
     return (
-        <button className={style} onClick={whenClicked}>{props.answer}</button>
+        <button
+            className={selected ? "answer chosen" : "answer"}
+            onClick={whenClicked}
+            value={props.answer}
+        >
+            {props.answer}
+        </button >
     )
 }

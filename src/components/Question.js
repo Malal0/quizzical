@@ -2,15 +2,19 @@ import React from "react"
 import Option from "./Option"
 
 export default function Question(props) {
-    function answerAction() {
-        console.log("schmee")
-    }
 
     const allAnswers = props.answersArray
 
     const answers = allAnswers.map(answer => {
+        let selected = false
+
+        function answerAction() {
+            selected = !selected
+            console.log(selected)
+        }
+
         return (
-            <Option handleClick={answerAction} answer={answer} />
+            <Option answer={answer} handleClick={answerAction} handleChange={answerAction} isSelected={selected} />
         )
     })
 
