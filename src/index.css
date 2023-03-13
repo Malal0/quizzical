@@ -104,7 +104,7 @@ body {
   width: 235px;
   background-color: #fffad1;
   border-radius: 46% 54% 34% 66% / 31% 35% 65% 69%;
-  position: absolute;
+  position: fixed;
   top: -70px;
   right: -70px;
   transform: rotate(135deg);
@@ -116,7 +116,7 @@ body {
   width: 297px;
   background-color: #deebf8;
   border-radius: 69% 31% 39% 61% / 55% 52% 48% 45%;
-  position: absolute;
+  position: fixed;
   left: -70px;
   bottom: -70px;
   z-index: -10;

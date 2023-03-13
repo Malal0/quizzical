@@ -13,8 +13,10 @@ export default function Question(props) {
             console.log(selected)
         }
 
+
+
         return (
-            <Option answer={answer} handleClick={answerAction} handleChange={answerAction} isSelected={selected} />
+            <Option answer={answer} handleClick={answerAction} isSelected={selected} value={answer === allAnswers.correct_answer ? 1 : 0} />
         )
     })
 
